@@ -1,0 +1,10 @@
+@use "../global/functions" as *;
+@use "../global" as g;
+
+/* section */
+.l-section {
+  padding-block: cal-clamp(48, 64);
+  @include g.mq("md") {
+    margin-top: 2px;
+  }
+}

@@ -1,0 +1,69 @@
+@use "../global/functions" as *;
+@use "../global" as g;
+
+/* heading */
+.c-heading {
+  color: g.$color-font-blue;
+  text-shadow: 0px 2px 24px rgba(0, 0, 0, 0.05);
+  font-family: g.$font-family-en;
+  font-size: rm(32);
+  font-weight: g.$font-weight-bold;
+  line-height: 120%;
+  letter-spacing: 6.4px;
+  padding-left: rm(84); //(72px + 12px)
+  padding-left: 84px;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: rm(72);
+    height: auto;
+    aspect-ratio: 72/38;
+    background: url(../img/common/heading-color.webp) no-repeat center left /
+      contain;
+  }
+  @include g.mq("md") {
+    font-size: rm(24);
+    letter-spacing: 4.8px;
+    padding-left: rm(54); //(42px + 12px)
+    &::before {
+      width: rm(42);
+      top: 3px;
+    }
+  }
+}
+
+.c-heading--white {
+  color: g.$color-font-white;
+  &::before {
+    background-image: url(../img/common/heading-white.webp);
+  }
+}
+
+.c-heading--single {
+  padding-left: 64px;
+  &::before {
+    top: 50%;
+    transform: translateY(-50%);
+    width: rm(52);
+    height: rm(28);
+  }
+  @include g.mq("md") {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 2.4px;
+    &::before {
+      top: 18px;
+    }
+  }
+}
+
+.c-heading--tag {
+  @include g.mq("md") {
+    &::before {
+      top: 5px;
+    }
+  }
+}

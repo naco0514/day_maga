@@ -1,0 +1,39 @@
+@use "../global/functions" as *;
+@use "../global" as g;
+
+/* sort */
+.c-sort {
+  display: flex;
+  gap: rm(10);
+  color: g.$color-font-gray;
+  font-size: cal-clamp(14, 18);
+  line-height: 130%;
+
+  @include g.mq("md") {
+    gap: rm(10);
+  }
+}
+
+.c-sort__left,
+.c-sort__right {
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  &.is-current {
+    color: g.$color-font-blue;
+    pointer-events: none;
+  }
+  @include g.hs(hp) {
+    transition: all 0.3s ease 0s;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  @include g.hs(hi) {
+    &:active {
+      opacity: 0.8;
+    }
+  }
+}
+
+.c-sort__bar {
+}

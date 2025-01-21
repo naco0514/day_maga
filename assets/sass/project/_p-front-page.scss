@@ -1,0 +1,106 @@
+@use "../global/functions" as *;
+@use "../global" as g;
+
+/* front page */
+
+.p-front-page__fv {
+}
+.p-front-page__inner {
+}
+.p-front-page__swiper {
+}
+
+/* 新着記事 */
+.p-front-page__new {
+  padding-block: rm(38) rm(40);
+}
+
+.p-front-page__new-inner {
+  @include g.mq("md") {
+    padding-inline: rm(44);
+  }
+}
+
+.p-front-page__new-heading {
+  display: flex;
+  justify-content: center;
+  margin-left: 5px; //左右調整
+  @include g.mq("md") {
+    justify-content: start;
+    margin-left: 0;
+  }
+}
+
+.p-front-page__new-cards {
+  margin-top: rm(46);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: cal-clamp(20, 64);
+  @include g.mq("md") {
+    margin-top: rm(32);
+    grid-template-columns: repeat(1, 1fr);
+    gap: rm(19);
+  }
+}
+
+.p-front-page__new-button {
+  margin-top: rm(48);
+  display: flex;
+  justify-content: center;
+  @include g.mq("md") {
+    margin-top: rm(33);
+    justify-content: end;
+  }
+}
+
+/* おすすめ記事 */
+.p-front-page__recommend {
+  padding-block: rm(65) rm(63);
+  background: url(../img/front-page/front-page_recommend_bg-pc.webp) no-repeat
+    top center / cover;
+  @include g.mq("md") {
+    padding-block: rm(40) rm(38);
+    background: url(../img/front-page/front-page_recommend_bg-sp.webp) no-repeat
+      top center / cover;
+  }
+}
+.p-front-page__recommend-inner {
+}
+.p-front-page__recommend-heading {
+}
+.p-front-page__recommend-slider {
+}
+
+/* すべての記事 */
+.p-front-page__all {
+  padding-block: rm(63) rm(64);
+  @include g.mq("md") {
+    padding-block: rm(48) rm(47);
+  }
+}
+
+.p-front-page__all-inner {
+}
+
+.p-front-page__all-heading {
+}
+
+.p-front-page__all-tab-list {
+  margin-top: rm(46);
+  @include g.mq("md") {
+    margin-top: rm(46);
+  }
+}
+
+.p-front-page__all-button {
+  margin-top: cal-clamp(20, 32);
+  display: flex;
+  justify-content: end;
+  @include g.mq("md") {
+    justify-content: center;
+  }
+}
+
+.p-front-page__all-tag-list {
+  margin-top: rm(64);
+}

@@ -1,0 +1,13 @@
+@use "../global/functions" as *;
+@use "../global" as g;
+
+/* header */
+.l-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 140px;
+  z-index: map-get(g.$layer, "header");
+  background: transparent;
+}

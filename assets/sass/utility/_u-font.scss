@@ -1,0 +1,191 @@
+@use "../global/functions" as *;
+@use "../global" as g;
+
+/* Zen+Maru+Gothic */
+.u-font-en-heading {
+  color: g.$color-font-black;
+  text-shadow: 0px 2px 24px rgba(0, 0, 0, 0.05);
+  font-family: "Zen Maru Gothic";
+  font-size: rm(28);
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: 5.6px;
+}
+
+.u-font-en-cta {
+  color: g.$color-font-blue;
+  font-family: "Zen Maru Gothic";
+  font-size: rm(24);
+  font-weight: 700;
+  line-height: 130%;
+  letter-spacing: 0.48px;
+}
+
+.u-font-en-btn {
+  color: g.$color-font-black;
+  font-family: "Zen Maru Gothic";
+  font-size: rm(20);
+  font-weight: 700;
+  line-height: 180%;
+  letter-spacing: 4px;
+}
+
+/* NotoSansJP */
+.u-font-cta {
+  color: g.$color-font-blue;
+  font-size: rm(18);
+  font-weight: 500;
+  line-height: 130%;
+}
+
+.u-font-category-filter {
+  color: g.$color-font-blue;
+  font-size: rm(18);
+  font-weight: 400;
+  line-height: 130%;
+}
+
+//FVカードのテキスト
+.u-font-fv-card-title {
+  color: g.$color-font-black;
+  font-size: rm(20);
+  font-weight: 500;
+  line-height: 160%;
+  letter-spacing: 1px;
+}
+
+.u-font-fv-card-category {
+  color: g.$color-font-blue;
+  font-size: rm(18);
+  font-weight: 400;
+  line-height: 140%;
+}
+
+.u-font-tag {
+  color: g.$color-font-black;
+  font-size: rm(14);
+  font-weight: 400;
+  line-height: 180%;
+}
+
+.u-font-fv-card-date {
+  color: g.$color-font-gray;
+  font-size: rm(14);
+  font-weight: 400;
+  line-height: 120%;
+}
+
+//その他カードのテキスト
+.u-font-card-title {
+  color: g.$color-font-black;
+  font-size: rm(15);
+  font-weight: 500;
+  line-height: 140%;
+  letter-spacing: 0.3px;
+}
+
+.u-font-card-category {
+  color: g.$color-font-blue;
+  font-size: rm(13);
+  font-weight: 400;
+  line-height: 160%;
+}
+
+.u-font-card-tag {
+  color: g.$color-font-black;
+  font-size: rm(12);
+  font-weight: 400;
+  line-height: 180%;
+}
+
+.u-font-card-date {
+  color: g.$color-font-gray;
+  font-size: rm(12);
+  font-weight: 400;
+  line-height: 120%;
+}
+
+//投稿（ページ）H1
+.u-font-post-h1-heading {
+  color: g.$color-font-black;
+  font-size: cal-clamp(20, 28);
+  font-weight: 500;
+  line-height: 180%;
+  letter-spacing: 2.8px;
+  @include g.mq("md") {
+    line-height: 150%;
+    letter-spacing: 2px;
+  }
+}
+.u-font-post-h1-link-m {
+  color: g.$color-font-blue;
+  font-size: cal-clamp(15, 16);
+  font-weight: 500;
+  line-height: 160%;
+  letter-spacing: 1.92px;
+  text-decoration-line: underline;
+  @include g.mq("md") {
+    letter-spacing: 0.9px;
+  }
+}
+
+.u-font-post-h1-link-s {
+  color: g.$color-font-blue;
+  font-size: cal-clamp(14, 15);
+  font-weight: 400;
+  line-height: 160%;
+  letter-spacing: 1.8px;
+  text-decoration-line: underline;
+  @include g.mq("md") {
+    letter-spacing: 0.84px;
+  }
+}
+
+.u-font-post-h1-date {
+  color: g.$color-font-gray;
+  font-size: cal-clamp(14, 16);
+  font-weight: 400;
+  line-height: 180%;
+}
+
+.u-font-post-h1-text {
+  color: g.$color-font-black;
+  font-size: cal-clamp(14, 15);
+  font-weight: 400;
+  line-height: 200%; /* 30px */
+  letter-spacing: 2.1px;
+  @include g.mq("md") {
+    line-height: 180%;
+    letter-spacing: 1.4px;
+  }
+}
+
+//投稿 H2
+.u-font-post-h2-heading {
+  color: g.$color-font-black;
+  font-size: cal-clamp(18, 24);
+  font-weight: 500;
+  line-height: 160%;
+  letter-spacing: 3.6px;
+  @include g.mq("md") {
+    letter-spacing: 2.7px;
+  }
+}
+
+//投稿 H3
+.u-font-post-h3-heading {
+  color: g.$color-font-black;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 160%;
+  letter-spacing: 3.2px;
+}
+
+//投稿 H4
+.u-font-post-h4-heading {
+  color: g.$color-font-black;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 160%;
+  letter-spacing: 3px;
+}

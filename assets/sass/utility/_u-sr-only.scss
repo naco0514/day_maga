@@ -1,0 +1,15 @@
+@use "../global/functions" as *;
+@use "../global" as g;
+
+/* スクリーンリーダー用(画面に表示しない) */
+.u-sr-only {
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}

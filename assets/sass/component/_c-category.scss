@@ -1,0 +1,48 @@
+@use "../global/functions" as *;
+@use "../global" as g;
+
+/* category */
+.c-category__card {
+  width: fit-content;
+  height: 29px;
+  display: grid;
+  place-items: center;
+  padding-block: rm(3);
+  padding-inline: rm(16);
+  border-radius: rm(4);
+  border: 1px solid g.$color-category-blue-dark;
+  background: g.$color-font-white;
+  color: g.$color-category-blue-dark;
+  font-size: rm(13);
+  line-height: 160%;
+}
+.c-category__card--large {
+  height: cal-clamp(29, 33);
+  padding-inline: cal-clamp(15, 19);
+  border-radius: cal-clamp(4, 6);
+  font-size: cal-clamp(13, 18);
+  line-height: 140%;
+  @include g.mq("md") {
+    line-height: 160%;
+  }
+}
+
+.c-category__card--blue {
+  border: 1px solid g.$color-category-blue-dark;
+  color: g.$color-category-blue-dark;
+}
+
+.c-category__card--green {
+  border: 1px solid g.$color-category-green;
+  color: g.$color-category-green;
+}
+
+.c-category__card--purple {
+  border: 1px solid g.$color-category-purple;
+  color: g.$color-category-purple;
+}
+
+.c-category__card--pink {
+  border: 1px solid g.$color-category-pink;
+  color: g.$color-category-pink;
+}
