@@ -1,0 +1,7 @@
+@use "../global/functions" as *;
+@use "../global" as g;
+
+/* section */
+.l-section {
+  padding-block: cal-clamp(48, 64);
+}

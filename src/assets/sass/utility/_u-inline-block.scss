@@ -1,0 +1,14 @@
+@use "../global/functions" as *;
+@use "../global" as g;
+
+/*  */
+.u-inline-block{
+	display: inline-block;
+}
+
+.u-inline-block--pc{
+	display: inline-block;
+	@include g.mq("md"){ 
+	display: inline;
+	}
+}

@@ -1,0 +1,21 @@
+@use "../global/functions" as *;
+@use "../global" as g;
+
+/*  */
+
+body {
+    color: g.$color-font-black;
+    background: g.$color-base-white;
+    font-family: g.$font-family-ja;
+    font-size: g.$font-size-base;
+    font-weight: g.$font-weight-base;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: inherit;
+}

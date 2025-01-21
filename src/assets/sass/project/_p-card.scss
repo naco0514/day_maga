@@ -1,0 +1,126 @@
+@use "../global/functions" as *;
+@use "../global" as g;
+
+/* card */
+.p-card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: rm(32);
+  row-gap: rm(34);
+  @include g.mq("lg") {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include g.mq("md") {
+    grid-template-columns: repeat(1, 1fr);
+    gap: rm(12);
+  }
+}
+
+.p-card__link {
+  display: inline-block;
+  padding: rm(16);
+  overflow: hidden;
+  border-radius: rm(12);
+  background: g.$color-font-white;
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.03),
+    0px 5px 30px 0px rgba(20, 43, 78, 0.2);
+  @include g.hs(hp) {
+    transition: all 0.3s ease 0s;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  @include g.hs(hi) {
+    &:active {
+      opacity: 0.8;
+    }
+  }
+}
+.p-card__link--fv {
+  padding: cal-clamp(16, 28);
+  border-radius: cal-clamp(12, 20);
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.02),
+    0px 16px 30px 0px rgba(0, 0, 0, 0.06);
+  @include g.mq("md") {
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.03),
+      0px 5px 30px 0px rgba(20, 43, 78, 0.2);
+  }
+}
+.p-card__item {
+}
+
+.p-card__img {
+  img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 270 / 150;
+    object-fit: cover;
+    border-radius: rm(8);
+  }
+}
+.p-card__img--fv {
+  img {
+    aspect-ratio: 540 / 309;
+  }
+  @include g.mq("md") {
+    img {
+      aspect-ratio: 270 / 158;
+    }
+  }
+}
+
+.p-card__body {
+  margin-top: rm(12);
+}
+
+.p-card__body--fv {
+  margin-top: cal-clamp(11, 16);
+}
+
+.p-card__date {
+  color: g.$color-font-gray;
+  font-size: rm(12);
+  line-height: 120%;
+}
+.p-card__date--fv {
+  font-size: cal-clamp(12, 14);
+}
+
+.p-card__title {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  margin-top: rm(8);
+  font-size: rm(15);
+  font-weight: 500;
+  line-height: 140%;
+  letter-spacing: 0.3px;
+}
+.p-card__title--fv {
+  font-size: cal-clamp(15, 20);
+  line-height: 160%;
+  letter-spacing: 1px;
+  @include g.mq("md") {
+    line-height: 140%;
+    letter-spacing: 0.3px;
+  }
+}
+
+.p-card__category {
+  margin-top: rm(9);
+}
+
+.p-card__tag {
+  display: flex;
+  white-space: nowrap;
+  gap: rm(8);
+  margin-top: rm(12);
+  overflow: hidden;
+}
+
+.p-card__tag--fv {
+  gap: cal-clamp(8, 16);
+  margin-top: cal-clamp(12, 16);
+}

@@ -1,0 +1,30 @@
+@use "../global/functions" as *;
+@use "../global" as g;
+
+/* home すべての記事 */
+.p-home {
+}
+
+.p-home__inner {
+}
+
+.p-home__heading {
+}
+
+.p-home__tab-list {
+  margin-top: rm(40);
+  @include g.mq("md") {
+    margin-top: rm(56);
+  }
+}
+
+.p-home__pagination {
+  margin-top: rm(56);
+  @include g.mq("md") {
+    margin-top: rm(32);
+  }
+}
+
+.p-home__tag-list {
+  margin-top: rm(64);
+}

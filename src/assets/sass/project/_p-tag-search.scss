@@ -1,0 +1,30 @@
+@use "../global/functions" as *;
+@use "../global" as g;
+
+/* tag-search #タグの検索結果 */
+.p-tag-search {
+}
+
+.p-tag-search__inner {
+}
+
+.p-tag-search__heading {
+}
+
+.p-tag-search__tab-list {
+  margin-top: rm(40);
+  @include g.mq("md") {
+    margin-top: rm(56);
+  }
+}
+
+.p-tag-serach__pagination {
+  margin-top: rm(56);
+  @include g.mq("md") {
+    margin-top: rm(32);
+  }
+}
+
+.p-tag-search__tag-list {
+  margin-top: rm(64);
+}

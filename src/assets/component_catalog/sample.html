@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>コンポーネントカタログ</title>
+    <!-- web font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+
+  <body>
+    <div class="l-inner">
+      <hr />
+      <h2 style="font-weight: bold; background-color: azure; padding: 10px">
+        ボタン
+      </h2>
+      <hr />
+      <!-- ノーマル -->
+      <a href="#" class="c-button c-button__text">view more</a>
+      <!-- ヘッダー押すボタン -->
+      <a href="#" class="c-button__push-header"
+        ><span class="c-button__push-header-text-1st"
+          >コンサルをお探しの企業様</span
+        ><span class="c-button__push-header-text-2nd">まずは無料相談</span></a
+      >
+      <!-- ヘッダー押すボタン(反転) -->
+      <a href="#" class="c-button__push-header c-button__push-header--modifier"
+        ><span
+          class="c-button__push-header-text-1st c-button__push-header-text-1st--modifier"
+          >コンサルタントの方</span
+        ><span
+          class="c-button__push-header-text-2nd c-button__push-header-text-2nd--modifier"
+          >案件の紹介登録</span
+        ></a
+      >
+      <hr />
+      <h2 style="font-weight: bold; background-color: azure; padding: 10px">
+        CTA
+      </h2>
+      <!-- CTA押すボタン右側にアロー -->
+
+      <a href="#" class="c-button__cta"
+        ><span class="c-button__cta-head01-bg">
+          <picture>
+            <source
+              srcset="../img/common/cta_btn01-pc.webp"
+              media="(min-width: 768px)"
+            />
+            <img
+              src="../img/common/cta_btn01-sp.webp"
+              alt=""
+              width="640"
+              height="78"
+              loading="lazy"
+              decoding="async"
+            />
+          </picture> </span
+        ><span class="c-button__cta-body01">プロジェクトの相談をする</span>
+        <span class="c-button__cta-head01">
+          <picture>
+            <source
+              srcset="../img/common/cta_btn01-pc.webp"
+              media="(min-width: 768px)"
+            />
+            <img
+              src="../img/common/cta_btn01-sp.webp"
+              alt="コンサルタントをお探しの企業様へ"
+              width="512"
+              height="60"
+              loading="lazy"
+              decoding="async"
+            />
+          </picture> 
+      </a>
+
+      <a href="#" class="c-button__cta"
+        ><span class="c-button__cta-head02-bg">
+          <picture>
+            <source
+              srcset="../img/common/cta_btn02-pc.webp"
+              media="(min-width: 768px)"
+            />
+            <img
+              src="../img/common/cta_btn02-sp.webp"
+              alt=""
+              width="640"
+              height="78"
+              loading="lazy"
+              decoding="async"
+            />
+          </picture> </span
+        ><span class="c-button__cta-body02">案件の紹介を受ける</span>
+        <span class="c-button__cta-head02">
+          <picture>
+            <source
+              srcset="../img/common/cta_btn02-pc.webp"
+              media="(min-width: 768px)"
+            />
+            <img
+              src="../img/common/cta_btn02-sp.webp"
+              alt="コンサルタントの方へ"
+              width="344"
+              height="56"
+              loading="lazy"
+              decoding="async"
+            />
+          </picture> 
+      </a>
+
+      <hr />
+      <h2 style="font-weight: bold; background-color: azure; padding: 10px">
+        見出し
+      </h2>
+      <hr />
+      <h2 class="c-heading">すべての記事</h2>
+      <h2 class="c-heading c-heading--white">すべての記事</h2>
+
+      <hr />
+      <h2 style="font-weight: bold; background-color: azure; padding: 10px">
+        検索
+      </h2>
+      <hr />
+      <a href="#" class="c-search">
+        <img src="../img/common/header_search.svg" alt="検索" width="28" height="29"  decoding="async">
+      </a>
+
+      <hr />
+      <h2 style="font-weight: bold; background-color: azure; padding: 10px">
+        ページネーション
+      </h2>
+      <hr />
+      		<!-- pagination-->
+		<div class="c-pagination c-pager">
+			<a href="#" class="prev page-numbers"></a>
+      <span class="page-numbers current">1</span>
+      <a href="#" class="page-numbers">2</a>
+      <a href="#" class="page-numbers">3</a>
+      <a href="#" class="page-numbers">4</a>
+      <span href="#" class="page-numbers dots">…</span>
+      <a href="#" class="page-numbers">15</a>
+			<a href="#" class="next page-numbers"></a>
+		</div>
+
+    <hr />
+    <h2 style="font-weight: bold; background-color: azure; padding: 10px">
+      ロゴ
+    </h2>
+    <hr />
+
+    <h1 class="c-logo__first"><img src="../img/common/header_logo.webp" alt="Day Maga" width="520" height="216" decoding="async"></h1>
+    <div class="c-logo__second"><img src="../img/common/header_logo02.webp" alt="Day Maga" width="520" height="216" decoding="async"></div>
+    <div class="c-logo__footer"><img src="../img/common/footer_logo.webp" alt="" width="207" height="43" loading="lazy" decoding="async"></div>
+
+    <hr />
+    <h2 style="font-weight: bold; background-color: azure; padding: 10px">
+      タグ
+    </h2>
+    <hr />
+    <a href="#" class="c-tag__link">#コンサルファーム</a>
+    <p href="#" class="c-tag__card">#コンサルファーム</p>
+
+    <hr />
+    <h2 style="font-weight: bold; background-color: azure; padding: 10px">
+      カテゴリ
+    </h2>
+    <hr />
+    <p class="c-category__card">新着情報</p>
+    <p class="c-category__card c-category__card--green">新着情報</p>
+    <p class="c-category__card c-category__card--purple">新着情報</p>
+    <p class="c-category__card c-category__card--pink">新着情報</p>
+      <hr />
+      <h2 style="font-weight: bold; background-color: azure; padding: 10px">
+        絞り込み（新着順・人気順）
+      </h2>
+      <hr />
+      <div class="c-sort">
+        <span class="c-sort__left current">新着順</span>
+        <span class="c-sort__bar">|</span>
+        <a href="#" class="c-sort__right">人気順</a>
+      </div>
+    </div>
+  </body>
+</html>

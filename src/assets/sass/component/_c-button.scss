@@ -1,0 +1,321 @@
+@use "../global/functions" as *;
+@use "../global" as g;
+
+/* button */
+//==================================================
+// 濃い青のボタン（もっと見る）
+//==================================================
+.c-button {
+  display: grid;
+  place-items: center;
+  width: cal-clamp(161, 172);
+  height: cal-clamp(48, 52);
+  padding-block: rm(6); //余白
+  padding-inline: rm(17) rm(10);
+  border: 2px solid g.$color-font-blue;
+  border-radius: rm(20) rm(20) 0px rm(20);
+  background-color: g.$color-font-blue;
+  box-shadow: 0px 2px 24px 0px rgba(0, 0, 0, 0.1);
+  @include g.hs(hp) {
+    transition: all 0.3s ease 0s;
+    &:hover {
+      background-color: g.$color-font-white;
+    }
+  }
+  @include g.hs(hi) {
+    &:active {
+      background-color: g.$color-font-white;
+    }
+  }
+  @include g.mq("md") {
+    padding-inline: rm(14) rm(10);
+  }
+}
+.c-button__text {
+  font-family: g.$font-family-en;
+  color: g.$color-font-white;
+  font-size: cal-clamp(18, 20);
+  font-weight: g.$font-weight-bold;
+  line-height: 180%;
+  letter-spacing: 4px;
+  @include g.hs(hp) {
+    transition: all 0.3s ease 0s;
+    &:hover {
+      color: g.$color-font-blue;
+    }
+  }
+  @include g.hs(hi) {
+    &:active {
+      color: g.$color-font-blue;
+    }
+  }
+  @include g.mq("md") {
+    letter-spacing: 3.6px;
+  }
+}
+//==================================================
+// 薄い青のボタン（single,404）
+//==================================================
+.c-button__light-blue {
+  display: grid;
+  place-items: center;
+  width: auto;
+  height: cal-clamp(50, 63);
+  padding-block: rm(14);
+  padding-inline: rm(30);
+  border-radius: rm(16);
+  border: 2px solid g.$color-font-white;
+  background: g.$color-blue-light;
+  color: g.$color-font-white;
+  font-size: cal-clamp(14, 24);
+  font-weight: 500;
+  line-height: 130%;
+  letter-spacing: 1.92px;
+  @include g.mq("md") {
+    letter-spacing: 1.12px;
+  }
+  @include g.hs(hp) {
+    transition: all 0.3s ease 0s;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  @include g.hs(hi) {
+    &:active {
+      opacity: 0.8;
+    }
+  }
+}
+//==================================================
+//ヘッダー押すボタン
+//==================================================
+.c-button__push-header {
+  width: 152px;
+  display: inline-block;
+  text-align: center;
+  box-shadow: 0 rm(4) 0 transparent; //影（透明）
+  @include g.hs(hp) {
+    transition: all 0.3s ease 0s;
+    &:hover {
+      opacity: 0.8;
+      box-shadow: none;
+      transform: translateY(rm(4)); //下に押し込む
+    }
+  }
+  @include g.hs(hi) {
+    &:active {
+      opacity: 0.8;
+      box-shadow: none;
+      transform: translateY(rm(4)); //下に押し込む
+    }
+  }
+}
+
+.c-button__push-header-text-1st {
+  padding: rm(1) rm(3) rm(0); //余白
+  border-radius: rm(8) rm(8) 0px 0px;
+  display: block;
+  background-color: g.$color-font-blue;
+  border: 1px solid g.$color-font-white;
+  color: g.$color-font-white;
+  font-size: rm(12);
+  font-weight: g.$font-weight-bold;
+  line-height: 166.667%;
+  white-space: nowrap;
+}
+.c-button__push-header-text-2nd {
+  padding: rm(3) 0; //余白
+  border-radius: 0px 0px rm(8) rm(8);
+  display: block;
+  background-color: g.$color-font-white;
+  border: 1px solid g.$color-font-white;
+  color: g.$color-font-blue;
+  font-size: rm(16);
+  font-weight: g.$font-weight-bold;
+  line-height: 125%;
+}
+
+// Modifier
+.c-button__push-header--modifier {
+  width: 144px;
+}
+.c-button__push-header-text-1st--modifier {
+  color: g.$color-font-blue;
+  background-color: g.$color-font-white;
+}
+.c-button__push-header-text-2nd--modifier {
+  color: g.$color-font-white;
+  background-color: g.$color-font-blue;
+}
+
+//==================================================
+//CTAボタン 01 02
+//==================================================
+.c-button__cta {
+  display: inline-block;
+  box-shadow: 0 rm(8) 0 transparent; //影（透明）
+  position: relative;
+  @include g.hs(hp) {
+    transition: all 0.3s ease 0s;
+    &:hover {
+      opacity: 0.8;
+      box-shadow: none;
+      transform: translateY(rm(8)); //下に押し込む
+    }
+  }
+  @include g.hs(hi) {
+    &:active {
+      opacity: 0.8;
+      box-shadow: none;
+      transform: translateY(rm(8)); //下に押し込む
+    }
+  }
+}
+
+//01
+.c-button__cta-body01 {
+  margin-top: rm(29);//上側imgとの差分
+  padding-block: rm(15);
+  padding-inline: rm(32) rm(66);
+  border-radius: 0px rm(8) rm(8) rm(8);
+  display: block;
+  background-color: g.$color-font-white;
+  border: 1px solid g.$color-font-white;
+  color: g.$color-font-blue;
+  font-family: g.$font-family-en;
+  font-size: rm(24);
+  font-weight: g.$font-weight-bold;
+  line-height: 130%;
+  letter-spacing: 0.48px;
+  box-shadow: 0px 0px 34px 0px rgba(0, 0, 0, 0.05),
+    0px 24px 44px 0px rgba(0, 0, 0, 0.05);
+  z-index: map-get(g.$layer, "btn3"); //レイヤー中央
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: rm(32);
+    width: rm(24);
+    height: rm(24);
+    background: url(../img/common/cta_arrow-blue.svg) no-repeat center right /
+      contain;
+  }
+  @include g.mq("md") {
+    margin-top: rm(20);//上側imgとの差分
+    padding-block: rm(11) rm(9);
+    padding-inline: rm(19) rm(41);
+    font-size: rm(18);
+    letter-spacing: 0.36px;
+    &::before {
+      right: rm(16);
+      width: rm(18);
+      height: rm(18);
+      margin-top: 2px; //調整
+    }
+  }
+  @media (max-width: 325px) {
+    font-size: rm(16);
+  }
+}
+
+//最前面・影なし
+.c-button__cta-head01 {
+  width: calc(320 / 392 * 100%); //親要素に対して81.6％
+  position: absolute;
+  z-index: map-get(g.$layer, "btn4"); //一番上
+  top: 0;
+  border-radius: rm(8) rm(8) rm(8) 0px;
+  @include g.mq("md") {
+    width: calc(256 / 282 * 100%); //親要素に対して90.78％
+  }
+}
+//最背面・影あり
+.c-button__cta-head01-bg {
+  width: calc(320 / 392 * 100%); //親要素に対して81.6％
+  position: absolute;
+  z-index: map-get(g.$layer, "btn2"); //一番下
+  top: 0;
+  border-radius: rm(8) rm(8) rm(8) 0px;
+  box-shadow: 0px 0px 34px 0px rgba(0, 0, 0, 0.05),
+    0px 24px 44px 0px rgba(0, 0, 0, 0.05);
+  @include g.mq("md") {
+    width: calc(256 / 282 * 100%); //親要素に対して90.78％
+  }
+}
+
+//02
+.c-button__cta-body02 {
+  margin-top: rm(29);//上側imgとの差分
+  padding-block: rm(13.9);
+  padding-inline: rm(30) rm(51.5);
+  border-radius: 0px rm(12) rm(12) rm(12);
+  display: block;
+  background-color: transparent;//背景透明
+  border: 2px solid g.$color-font-white;
+  color: g.$color-font-white;
+  font-family: g.$font-family-en;
+  font-size: rm(24);
+  font-weight: g.$font-weight-bold;
+  line-height: 130%;
+  letter-spacing: 1.92px;
+  text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 0px 34px 0px rgba(0, 0, 0, 0.05),
+    0px 24px 44px 0px rgba(0, 0, 0, 0.05);
+  z-index: map-get(g.$layer, "btn3"); //レイヤー中央
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: rm(29);
+    width: rm(24);
+    height: rm(24);
+    background: url(../img/common/cta_arrow-white.svg) no-repeat center right /
+      contain;
+  }
+  @include g.mq("md") {
+    margin-top: rm(18);//上側imgとの差分
+    padding-block: rm(10) rm(8);
+    padding-inline: rm(22) rm(37.5);
+    font-size: rm(18);
+    text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    letter-spacing: 1.44px;
+    &::before {
+      right: rm(20);
+      width: rm(18);
+      height: rm(18);
+      margin-top: 2px; //調整
+    }
+  }
+  @media (max-width: 325px) {
+    font-size: rm(16);
+  }
+}
+
+//最前面・影なし
+.c-button__cta-head02 {
+  width: calc(212 / 317.5 * 100%); //親要素に対して66.77％
+  position: absolute;
+  z-index: map-get(g.$layer, "btn4"); //一番上
+  top: 0;
+  border-radius: rm(8) rm(8) rm(8) 0px;
+  @include g.mq("md") {
+    width: calc(172 / 237.5 * 100%); //親要素に対して72.42％
+  }
+}
+//最背面・影あり
+.c-button__cta-head02-bg {
+  width: calc(212 / 317.5 * 100%); //親要素に対して66.77％
+  position: absolute;
+  z-index: map-get(g.$layer, "btn2"); //一番下
+  top: 0;
+  border-radius: rm(8) rm(8) rm(8) 0px;
+  box-shadow: 0px 0px 34px 0px rgba(0, 0, 0, 0.05),
+    0px 24px 44px 0px rgba(0, 0, 0, 0.05);
+  @include g.mq("md") {
+    width: calc(172 / 237.5 * 100%); //親要素に対して72.42％
+  }
+}

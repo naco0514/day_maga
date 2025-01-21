@@ -1,0 +1,280 @@
+@use "../global/functions" as *;
+@use "../global" as g;
+
+/* header */
+.p-header {
+  position: relative;
+  z-index: map-get(g.$layer, "header");
+  transition: all 0.3s ease 0s;
+  &.is-scroll {
+    background-color: g.$color-base-white;
+    .p-header__logo {
+      padding-top: rm(29);
+    }
+    .p-header__logo01 {
+      opacity: 0;
+      display: none;
+      transition: 1s;
+    }
+    .p-header__logo02 {
+      opacity: 1;
+      display: block;
+      transition: 1s;
+    }
+
+    @include g.mq("md") {
+      height: g.$header-height-sp;
+      .p-header__container {
+        width: auto;
+        height: 68px;
+        padding-inline: rm(32) rm(32);
+        border-radius: 0px 0px 0px rm(24);
+        padding-top: rm(21); //searchの余白分を調整
+      }
+      .p-header__icon {
+        flex-direction: row-reverse;
+        gap: rm(40); //search余白分調整
+      }
+      .p-header__logo {
+        padding-top: rm(20);
+        padding-left: rm(24);
+      }
+    }
+    @media (max-width: 375px) {
+      .p-header__container {
+        padding-inline: rm(20);
+      }
+      .p-header__icon {
+        gap: rm(16);
+      }
+    }
+  }
+}
+
+.p-header__inner {
+  display: flex;
+  justify-content: space-between;
+  @include g.mq("md") {
+    gap: rm(10);
+  }
+}
+
+.p-header__logo {
+  padding-top: rm(32);
+  padding-left: rm(48);
+  @include g.mq("md") {
+    padding-left: rm(20);
+    flex-grow: 1;
+  }
+}
+.p-header__logo01 {
+  transition: all 0.3s ease 0s;
+  opacity: 1;
+}
+.p-header__logo02 {
+  transition: all 0.3s ease 0s;
+  opacity: 0;
+  display: none;
+}
+
+.p-header__container {
+  height: g.$header-height-pc; //青bg
+  border-radius: 0px 0px 0px rm(32);
+  background: g.$color-blue-dark;
+  display: flex;
+  align-items: center;
+  gap: rm(48);
+  padding-inline: rm(64) rm(56); //右側searchの余白分を調整(64px - 8px)
+  @media (max-width: 1300px) {
+    flex-direction: column-reverse;
+    gap: rm(24);
+    height: 140px;
+    justify-content: center;
+  }
+  @media (max-width: 860px) {
+    padding-inline: rm(32);
+  }
+  @include g.mq("md") {
+    width: 84px;
+    border-radius: 0px 0px 0px rm(28);
+    // flex-shrink: 0;
+    padding-block: rm(28) rm(20); //searchの余白分を調整
+    padding-inline: rm(16); //searchの余白分を調整
+    // gap: 0;
+    height: auto;
+  }
+  @media (max-width: 375px) {
+    padding-inline: rm(16);
+    width: auto;
+  }
+}
+
+.p-header__nav {
+}
+
+.p-header__nav-list {
+  display: flex;
+  gap: rm(48);
+  @media (max-width: 860px) {
+    gap: rm(32);
+  }
+  @include g.mq("md") {
+    flex-direction: column;
+    margin-top: rm(57);
+    align-items: center;
+    gap: rm(24);
+    margin-right: rm(40);
+  }
+}
+
+.p-header__nav-item {
+}
+.p-header__nav-item--search {
+  display: none;
+  @include g.mq("md") {
+    display: block;
+    margin-top: -10px;
+    .c-search {
+      padding-inline: rm(30);
+    }
+
+    @include g.hs(hp) {
+      transition: all 0.3s ease 0s;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+    @include g.hs(hi) {
+      &:active {
+        opacity: 0.8;
+      }
+    }
+  }
+}
+
+.p-header__nav-link {
+  color: g.$color-font-white;
+  font-size: rm(16);
+  font-weight: 700;
+  line-height: 120%;
+  padding-block: rm(8);
+  white-space: nowrap;
+  @include g.hs(hp) {
+    transition: all 0.3s ease 0s;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  @include g.hs(hi) {
+    &:active {
+      opacity: 0.8;
+    }
+  }
+}
+
+.p-header__wrapper {
+  display: flex;
+  gap: rm(40); //右側searchの余白分を調整(48px - 8px)
+  align-items: center;
+  @media (max-width: 860px) {
+    gap: rm(8);
+  }
+}
+.p-header__button {
+  display: flex;
+  align-items: center;
+  gap: rm(32);
+  @media (max-width: 860px) {
+    gap: rm(16);
+  }
+  @include g.mq("md") {
+    display: none;
+  }
+}
+
+.p-header__button-left {
+}
+
+.p-header__button-right {
+}
+
+.p-header__icon {
+  @include g.mq("md") {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: rm(22); //search余白分調整
+  }
+}
+
+.p-header__icon-open {
+  display: none;
+  @include g.mq("md") {
+    display: block;
+    width: rm(36);
+    height: rm(25);
+    background: url(../img/common/header_icon-open.svg) no-repeat top left /
+      contain;
+    padding: rm(8);
+    z-index: map-get(g.$layer, "drawer-icon");
+    transition: all 0.3s ease 0s;
+    &.is-checked {
+      background: url(../img/common/header_icon-close.svg) no-repeat top left /
+        contain;
+      margin-top: -7px;
+      margin-right: 3px;
+    }
+
+    @include g.hs(hp) {
+      transition: all 0.3s ease 0s;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+    @include g.hs(hi) {
+      &:active {
+        opacity: 0.8;
+      }
+    }
+  }
+}
+
+.p-header__icon-search {
+  @include g.hs(hp) {
+    transition: all 0.3s ease 0s;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  @include g.hs(hi) {
+    &:active {
+      opacity: 0.8;
+    }
+  }
+}
+
+.p-header__drawer-content {
+  @include g.mq("md") {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: rgb(19, 80, 151, 0.95);
+    transform: translateX(100%); //100％右に移動
+    transition: transform 0.4s linear;
+    z-index: map-get(g.$layer, "drawer");
+    padding-block: rm(24) rm(32);
+    padding-inline: rm(64) rm(24);
+    border-radius: 0px 0px 0px rm(24);
+
+    &.is-checked {
+      transform: translateX(0); //右から元の位置へ戻る
+      .p-header__nav-list {
+        gap: rm(32);
+      }
+      .p-header__nav-link {
+        padding-inline: rm(8);
+      }
+    }
+  }
+}
